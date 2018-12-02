@@ -1,0 +1,75 @@
+.game {
+    overflow: hidden;
+    padding: 20px 0 0 0;
+    box-sizing: border-box;
+    text-align: center;
+
+    height: calc(100vh - 20px);
+
+    p {
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
+    .tiles-wrapper {
+        margin-bottom: 15px;
+
+        &.solved {
+            -webkit-animation-name: shakyshake;
+            -webkit-animation-duration: 0.8s;
+            -webkit-transform-origin:50% 50%;
+            -webkit-animation-iteration-count: 2;
+            -webkit-animation-timing-function: linear;
+        }
+    }
+
+    .stats {
+        margin-bottom: 15px;
+    }
+
+    .actions {
+        button {
+            -moz-box-shadow: inset 0px 39px 0px -24px #e67a73;
+            -webkit-box-shadow: inset 0px 39px 0px -24px #e67a73;
+            box-shadow: inset 0px 39px 0px -24px #e67a73;
+            background-color: #e4685d;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            border-radius: 4px;
+            border: 1px solid #ffffff;
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            font-family: Arial;
+            font-size: 15px;
+            padding: 6px 15px;
+            text-decoration: none;
+            text-shadow: 0px 1px 0px #b23e35;
+    
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
+    
+            &:hover {
+                background-color: #eb675e;
+            }
+    
+            &:active {
+                position:relative;
+                top: 1px;
+            }
+
+            &:focus {
+                outline: 0;
+            }
+
+            &.solved {
+                pointer-events: none;
+                background-color: #b3afae;
+                box-shadow: none;
+                text-shadow: none;
+            }
+        }
+    }
+}
