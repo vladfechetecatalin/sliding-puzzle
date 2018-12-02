@@ -5,15 +5,8 @@ class Tile extends Component {
     constructor(props) {
         super(props);
 
-        this.props = props;
         this.style = {};
-
         this.clickHandler = this.clickHandler.bind(this);
-    }
-
-    componentWillMount() {
-        this.setBackgroundPosition();
-        this.setCSSPosition();
     }
 
     setBackgroundPosition() {
